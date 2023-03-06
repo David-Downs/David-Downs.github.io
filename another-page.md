@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Met our leadership
+## Meet our leadership
 
 President:
 Steward Presley
