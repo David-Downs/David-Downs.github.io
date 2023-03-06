@@ -15,7 +15,7 @@ Recording Secretary:
 
 Travis Norris
 
-
+![10689761_864401003594363_235699055410247504_n](https://user-images.githubusercontent.com/127059658/223016605-50978e90-6db2-4e61-9edf-519befa6c6ec.jpg)
 
 
 
