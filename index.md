@@ -13,7 +13,7 @@ layout: default
 # Up Comming Events 
 
 
-## March 19, 2023 Union Meeting and Nominations 
+## March 19, 2023 Union Meeting and Nominations for Officers 
 
 
 
