@@ -5,6 +5,7 @@ layout: default
 ## Meet our leadership
 
 President:
+
 Steward Presley
 
 
@@ -12,13 +13,15 @@ Steward Presley
 
 
 Recording Secretary:
+
 Travis Norris
 
 
 
 
 
-Financail Secretary:
+Financial Secretary:
+
 David Downs 
 
 
