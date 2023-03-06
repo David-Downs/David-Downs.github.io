@@ -20,12 +20,12 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 
 
-#### May 21, 2023 Union Meeting 
+### May 21, 2023 Union Meeting 
 
 
 
-#### June 18, 2023 Union Meeting
+### June 18, 2023 Union Meeting
 
 
 
-#### July 16, 2023
+### July 16, 2023
