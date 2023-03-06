@@ -4,7 +4,7 @@
 
 *Local 8982 is a labor orginazation for Concord Prep Plant*
 
-
+![Thumbnail of Architect](thumbnail.png)
 
 ## Usage
 
