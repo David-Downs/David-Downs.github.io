@@ -21,7 +21,7 @@ Travis Norris
 Financial Secretary:
 David Downs 
 
-![333873434_1438966973513230_2687094407422472861_n](https://user-images.githubusercontent.com/127059658/223017060-a4c81b97-cd65-42c3-b1d8-0da7a7a58ade.jpg)
+![333873434_1438966973513230_2687094407422472861_n](https://user-images.githubusercontent.com/127059658/223017238-17956c35-5f2d-4863-9218-4047962d63b1.jpg)
 
 
 
