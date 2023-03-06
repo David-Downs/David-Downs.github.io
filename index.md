@@ -28,4 +28,5 @@ There should be whitespace between paragraphs. We recommend including a README, 
 
 
 
-### July 16, 2023
+### July 16, 2023 Union Meeting 
+
