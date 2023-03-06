@@ -4,34 +4,34 @@ layout: default
 
 ## Met our leadership
 
-President 
+President:
 Steward Presley
 
 
 
 
 
-Recording Secretary
+Recording Secretary:
 Travis Norris
 
 
 
 
 
-Financail Secretary 
+Financail Secretary:
 David Downs 
 
 
 
 
 
-Mine Commitee Chairman 
+Mine Commitee Chairman: 
 Antoino Cottingham 
 
 
 
 
-Safety Commitee Chairman 
+Safety Commitee Chairman:
 Chris Kendrick 
 
 
