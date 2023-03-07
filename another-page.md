@@ -20,7 +20,7 @@ Travis Norris
 Financial Secretary:
 David Downs 
 
-![David_Downs](https://github.com/David-Downs/David-Downs.github.io/blob/main/Images/David.jpg =250x250)
+![David_Downs](https://github.com/David-Downs/David-Downs.github.io/blob/main/Images/David.jpg)
 
 
 
