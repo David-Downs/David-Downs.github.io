@@ -5,9 +5,9 @@ layout: default
 ## Meet our leadership
 
 President:
-Steward Presley III
+Steward Presley 
 
-<img src="<img src="https://github.com/David-Downs/David-Downs.github.io/blob/main/Images/Stew.jpg" width="225" height="300" />
+<img src="https://github.com/David-Downs/David-Downs.github.io/blob/main/Images/Stew.jpg" width="225" height="300" />
 
 
 
