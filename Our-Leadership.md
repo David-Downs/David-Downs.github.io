@@ -4,7 +4,7 @@ layout: default
 
 [back](./)
 
-## Meet our leadership
+# Meet our leadership
 
 President:
 Steward Presley 
