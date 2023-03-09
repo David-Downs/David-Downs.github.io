@@ -7,7 +7,7 @@ layout: default
 President:
 Steward Presley 
 
-<img src="https://github.com/David-Downs/David-Downs.github.io/blob/main/Images/Stew.jpg" width="225" height="300" />
+<img src="https://github.com/David-Downs/David-Downs.github.io/blob/main/Images/Stew.jpg?raw=true" width="225" height="300" />
 
 
 
