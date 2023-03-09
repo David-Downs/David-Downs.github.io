@@ -1,5 +1,3 @@
-[back](./)
-
 ---
 layout: default
 ---
