@@ -31,3 +31,5 @@ layout: default
 
 ### July 16, 2023 Union Meeting 
 
+
+<iframe src="Ithaca-map.html" height="500" width="500"></iframe>
