@@ -17,7 +17,7 @@ layout: default
 
 
 
-## Febuary 16, 2025 Union Meeting 
+## February 16, 2025 Union Meeting 
 
 
 
