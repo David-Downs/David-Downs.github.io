@@ -640,3 +640,15 @@ a {
     letter-spacing: 1.3px;
   }
 }
+/* Desktop header logo sizing */
+@media (min-width: 651px) {
+  .umwa-logo {
+    height: 42px;
+    width: auto;
+    max-width: 125px;
+  }
+
+  .header-inner {
+    min-height: 64px;
+  }
+}
