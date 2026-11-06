@@ -652,3 +652,22 @@ a {
     min-height: 64px;
   }
 }
+/* FORCE DESKTOP LOGO SIZE */
+@media screen and (min-width: 651px) {
+  .site-header .umwa-logo {
+    width: auto !important;
+    height: 45px !important;
+    max-width: 130px !important;
+    max-height: 45px !important;
+  }
+
+  .site-header .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .site-header .header-inner {
+    min-height: 68px;
+  }
+}
