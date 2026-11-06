@@ -600,3 +600,43 @@ a {
     margin: auto;
   }
 }
+/* UMWA HEADER LOGO */
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.umwa-logo {
+  display: block;
+  width: auto;
+  height: 64px;
+  max-width: 180px;
+  object-fit: contain;
+}
+
+.local-number {
+  padding-left: 16px;
+  border-left: 2px solid var(--gold);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* Smaller header logo on phones */
+@media (max-width: 650px) {
+
+  .umwa-logo {
+    height: 50px;
+    max-width: 140px;
+  }
+
+  .local-number {
+    padding-left: 10px;
+    font-size: 0.78rem;
+    letter-spacing: 1.3px;
+  }
+}
