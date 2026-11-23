@@ -67,13 +67,56 @@ async function enableLocal8982Notifications() {
     }
 
     status.textContent =
-      "Preparing notification service...";
+  "Preparing notification service...";
 
-    const registration =
-      await navigator.serviceWorker.ready;
+const registration =
+  await navigator.serviceWorker.register(
+    "/service-worker.js",
+    { scope: "/" }
+  );
 
-    status.textContent =
-      "Notification service is ready.";
+if (!registration.active) {
+  const worker =
+    registration.installing || registration.waiting;
+
+  if (!worker) {
+    throw new Error(
+      "Service worker could not be started."
+    );
+  }
+
+  await new Promise((resolve, reject) => {
+    const timeout = setTimeout(() => {
+      reject(
+        new Error(
+          "Service worker did not become active."
+        )
+      );
+    }, 15000);
+
+    worker.addEventListener("statechange", () => {
+      if (worker.state === "activated") {
+        clearTimeout(timeout);
+        resolve();
+      }
+
+      if (worker.state === "redundant") {
+        clearTimeout(timeout);
+        reject(
+          new Error(
+            "Service worker installation failed."
+          )
+        );
+      }
+    });
+  });
+}
+
+status.textContent =
+  "Notification service is ready.";
+
+button.textContent =
+  "Service Ready";
 
   } catch (error) {
 
