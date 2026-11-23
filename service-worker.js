@@ -52,4 +52,74 @@ self.addEventListener("fetch", event => {
         caches.open(CACHE_NAME)
           .then(cache => cache.put(event.request, copy));
 
-        return 
+        return
+        /* =========================================================
+   PUSH NOTIFICATIONS
+   ========================================================= */
+
+self.addEventListener("push", event => {
+  let data = {
+    title: "UMWA Local 8982",
+    body: "You have a new Local 8982 notification.",
+    url: "/"
+  };
+
+  if (event.data) {
+    try {
+      const incoming = event.data.json();
+
+      data = {
+        title: incoming.title || data.title,
+        body: incoming.body || data.body,
+        url: incoming.url || data.url
+      };
+    } catch (error) {
+      console.error("Unable to read push notification:", error);
+    }
+  }
+
+  const options = {
+    body: data.body,
+    icon: "/assets/images/icon-192.png",
+    badge: "/assets/images/icon-192.png",
+    data: {
+      url: data.url
+    },
+    tag: "umwa8982-notification"
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(data.title, options)
+  );
+});
+
+
+/* Open the Local 8982 app when a notification is tapped */
+
+self.addEventListener("notificationclick", event => {
+  event.notification.close();
+
+  const destination =
+    event.notification.data?.url || "/";
+
+  event.waitUntil(
+    clients.matchAll({
+      type: "window",
+      includeUncontrolled: true
+    }).then(clientList => {
+
+      /* If UMWA 8982 is already open, focus it */
+      for (const client of clientList) {
+        if ("focus" in client) {
+          client.navigate(destination);
+          return client.focus();
+        }
+      }
+
+      /* Otherwise open the PWA */
+      if (clients.openWindow) {
+        return clients.openWindow(destination);
+      }
+    })
+  );
+});
