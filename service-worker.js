@@ -1,4 +1,4 @@
-const CACHE_NAME = "umwa8982-v2";
+const CACHE_NAME = "umwa8982-v3";
 
 const APP_ASSETS = [
   "/",
@@ -14,8 +14,19 @@ const APP_ASSETS = [
 /* Install and cache the basic app files */
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(APP_ASSETS))
+    caches.open(CACHE_NAME).then(async cache => {
+      for (const asset of APP_ASSETS) {
+        try {
+          await cache.add(asset);
+        } catch (error) {
+          console.warn(
+            "Could not cache asset:",
+            asset,
+            error
+          );
+        }
+      }
+    })
   );
 
   self.skipWaiting();
