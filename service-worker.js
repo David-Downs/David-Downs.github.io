@@ -61,10 +61,15 @@ self.addEventListener("fetch", event => {
         const copy = response.clone();
 
         caches.open(CACHE_NAME)
-          .then(cache => cache.put(event.request, copy));
+  .then(cache => cache.put(event.request, copy));
 
-        return
-        /* =========================================================
+return response;
+})
+.catch(() => caches.match(event.request))
+);
+});
+
+/* =========================================================
    PUSH NOTIFICATIONS
    ========================================================= */
 
