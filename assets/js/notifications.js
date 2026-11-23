@@ -113,10 +113,69 @@ if (!registration.active) {
 }
 
 status.textContent =
-  "Notification service is ready.";
+  "Connecting this device...";
+
+let subscription =
+  await registration.pushManager.getSubscription();
+
+if (!subscription) {
+
+  const keyResponse =
+    await fetch(
+      PUSH_SERVER + "/vapid-public-key"
+    );
+
+  if (!keyResponse.ok) {
+    throw new Error(
+      "Unable to retrieve notification key."
+    );
+  }
+
+  const keyData =
+    await keyResponse.json();
+
+  const applicationServerKey =
+    urlBase64ToUint8Array(
+      keyData.publicKey
+    );
+
+  subscription =
+    await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey
+    });
+}
+
+status.textContent =
+  "Saving notification subscription...";
+
+const saveResponse =
+  await fetch(
+    PUSH_SERVER + "/subscribe",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(
+        subscription.toJSON()
+      )
+    }
+  );
+
+if (!saveResponse.ok) {
+  throw new Error(
+    "Unable to save notification subscription."
+  );
+}
+
+status.textContent =
+  "Notifications are enabled on this device.";
 
 button.textContent =
-  "Service Ready";
+  "Notifications Enabled";
+
+button.disabled = true;
 
   } catch (error) {
 
