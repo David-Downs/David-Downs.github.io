@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Install UMWA 8982</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/images/umwa-logo.png">
+
+  <link
+    rel="manifest"
+    href="/manifest.webmanifest">
+
+  <meta
+    name="theme-color"
+    content="#d5a328">
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css">
+
+  <style>
+
+    .install-hero {
+      padding: 80px 24px 60px;
+
+      background:
+        radial-gradient(
+          circle at 50% 20%,
+          rgba(213,163,40,0.15),
+          transparent 35%
+        ),
+        #090909;
+
+      text-align: center;
+    }
+
+    .install-hero img {
+      width: 115px;
+      height: 115px;
+
+      margin-bottom: 22px;
+
+      border-radius: 24px;
+
+      box-shadow:
+        0 12px 35px
+        rgba(0,0,0,0.35);
+    }
+
+    .install-hero h1 {
+      margin: 0;
+
+      font-size:
+        clamp(2.5rem, 8vw, 5rem);
+
+      line-height: 1;
+    }
+
+    .install-hero h1 span {
+      color: var(--gold);
+    }
+
+    .install-hero p {
+      max-width: 680px;
+
+      margin:
+        22px auto 0;
+
+      color: #cfcfcf;
+
+      font-size: 1.08rem;
+    }
+
+
+    .install-area {
+      padding: 70px 24px;
+
+      background: #111111;
+    }
+
+    .install-grid {
+      max-width: 1000px;
+
+      margin: auto;
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 24px;
+    }
+
+    .install-card {
+      padding: 34px;
+
+      background: #191919;
+
+      border:
+        1px solid #303030;
+
+      border-top:
+        5px solid var(--gold);
+
+      border-radius: 10px;
+    }
+
+    .install-card h2 {
+      margin:
+        0 0 8px;
+
+      font-size: 1.7rem;
+    }
+
+    .install-card .device {
+      margin-bottom: 26px;
+
+      color: var(--gold-light);
+
+      font-size: 0.8rem;
+
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+    }
+
+    .install-step {
+      margin-bottom: 22px;
+
+      display: grid;
+
+      grid-template-columns:
+        38px 1fr;
+
+      gap: 14px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      color: #090909;
+
+      background: var(--gold);
+
+      border-radius: 50%;
+
+      font-weight: 900;
+    }
+
+    .install-step h3 {
+      margin:
+        1px 0 4px;
+
+      font-size: 1rem;
+    }
+
+    .install-step p {
+      margin: 0;
+
+      color: #aaaaaa;
+
+      font-size: 0.92rem;
+    }
+
+
+    .notification-instructions {
+      max-width: 1000px;
+
+      margin:
+        28px auto 0;
+
+      padding: 34px;
+
+      background: #f4f4f2;
+
+      color: #111111;
+
+      border-left:
+        7px solid var(--gold);
+
+      border-radius: 10px;
+    }
+
+    .notification-instructions h2 {
+      margin:
+        0 0 12px;
+    }
+
+    .notification-instructions p {
+      margin:
+        0 0 12px;
+
+      color: #444444;
+    }
+
+
+    .install-footer-actions {
+      max-width: 1000px;
+
+      margin:
+        35px auto 0;
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+    }
+
+
+    @media (max-width: 750px) {
+
+      .install-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .install-card {
+        padding: 28px 22px;
+      }
+
+      .install-hero {
+        padding:
+          60px 20px 45px;
+      }
+
+      .notification-instructions {
+        padding: 28px 22px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <div class="brand">
+
+        <a
+          class="brand-link"
+          href="/">
+
+          <img
+            class="umwa-logo"
+            src="/assets/images/umwa-logo.png"
+            alt="United Mine Workers of America"
+            style="
+              width:130px !important;
+              height:45px !important;
+              max-width:130px !important;
+              max-height:45px !important;
+              object-fit:contain !important;
+            ">
+
+          <span class="local-number">
+            LOCAL 8982
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <nav class="main-nav">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/#meetings">
+          Meetings
+        </a>
+
+        <a href="/#resources">
+          Resources
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <section class="install-hero">
+
+      <img
+        src="/assets/images/icon-192.png"
+        alt="UMWA 8982 App Icon">
+
+      <p class="eyebrow">
+        UMWA LOCAL 8982
+      </p>
+
+      <h1>
+        Install the
+        <span>UMWA 8982</span>
+        App
+      </h1>
+
+      <p>
+        Put Local 8982 directly on your phone
+        for quick access to meeting information,
+        union resources and optional Local
+        notifications.
+      </p>
+
+    </section>
+
+
+    <!-- INSTALLATION -->
+
+    <section class="install-area">
+
+      <div class="install-grid">
+
+
+        <!-- IPHONE -->
+
+        <article class="install-card">
+
+          <div class="device">
+            iPhone / iOS
+          </div>
+
+          <h2>
+            Install on iPhone
+          </h2>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              1
+            </div>
+
+            <div>
+
+              <h3>
+                Open Safari
+              </h3>
+
+              <p>
+                Open Safari on your iPhone
+                and go to
+                <strong>umwa8982.org</strong>.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              2
+            </div>
+
+            <div>
+
+              <h3>
+                Tap Share
+              </h3>
+
+              <p>
+                Tap the Safari Share button,
+                then scroll through the available
+                actions.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              3
+            </div>
+
+            <div>
+
+              <h3>
+                Add to Home Screen
+              </h3>
+
+              <p>
+                Select
+                <strong>Add to Home Screen</strong>.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              4
+            </div>
+
+            <div>
+
+              <h3>
+                Open as Web App
+              </h3>
+
+              <p>
+                Make sure
+                <strong>Open as Web App</strong>
+                is enabled when that option
+                appears, then tap
+                <strong>Add</strong>.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              5
+            </div>
+
+            <div>
+
+              <h3>
+                Open UMWA 8982
+              </h3>
+
+              <p>
+                The UMWA 8982 icon will appear
+                on your Home Screen. Tap the icon
+                to launch the app.
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- ANDROID -->
+
+        <article class="install-card">
+
+          <div class="device">
+            Android
+          </div>
+
+          <h2>
+            Install on Android
+          </h2>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              1
+            </div>
+
+            <div>
+
+              <h3>
+                Open Chrome
+              </h3>
+
+              <p>
+                Open Google Chrome on your
+                Android phone and go to
+                <strong>umwa8982.org</strong>.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              2
+            </div>
+
+            <div>
+
+              <h3>
+                Open the Chrome Menu
+              </h3>
+
+              <p>
+                Tap the three-dot menu in the
+                upper-right corner of Chrome.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              3
+            </div>
+
+            <div>
+
+              <h3>
+                Install the App
+              </h3>
+
+              <p>
+                Choose
+                <strong>Install app</strong>
+                or
+                <strong>Add to Home screen</strong>,
+                depending on the version of Chrome
+                on your phone.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              4
+            </div>
+
+            <div>
+
+              <h3>
+                Confirm
+              </h3>
+
+              <p>
+                Follow Chrome's confirmation
+                prompt to add UMWA 8982 to
+                your phone.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="install-step">
+
+            <div class="step-number">
+              5
+            </div>
+
+            <div>
+
+              <h3>
+                Open UMWA 8982
+              </h3>
+
+              <p>
+                Tap the UMWA 8982 icon from
+                your Home Screen or app list.
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- NOTIFICATIONS -->
+
+      <div class="notification-instructions">
+
+        <p class="eyebrow">
+          OPTIONAL
+        </p>
+
+        <h2>
+          Turn On Local 8982 Notifications
+        </h2>
+
+        <p>
+          After installing the app, open
+          <strong>UMWA 8982</strong>.
+          The installed app will display the
+          <strong>Local 8982 Notifications</strong>
+          section.
+        </p>
+
+        <p>
+          Tap
+          <strong>Enable Notifications</strong>
+          and allow notifications when your
+          phone asks for permission.
+        </p>
+
+        <p>
+          Members who opt in can receive
+          union meeting reminders and important
+          Local 8982 announcements.
+        </p>
+
+      </div>
+
+
+      <!-- ACTIONS -->
+
+      <div class="install-footer-actions">
+
+        <a
+          class="button button-gold"
+          href="/">
+          Return to Local 8982
+        </a>
+
+        <a
+          class="button button-outline"
+          href="https://members.umwa8982.org">
+          Member Resources
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <strong>
+      UMWA LOCAL 8982
+    </strong>
+
+    <p>
+      United Mine Workers of America
+    </p>
+
+    <p>
+      Install UMWA 8982
+    </p>
+
+  </footer>
+
+</body>
+</html>
