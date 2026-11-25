@@ -1,4 +1,4 @@
-const CACHE_NAME = "umwa8982-v4";
+const CACHE_NAME = "umwa8982-v5";
 
 const APP_ASSETS = [
   "/",
@@ -35,38 +35,191 @@ self.addEventListener("install", event => {
 /* Remove old caches when we update the app */
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames
-          .filter(name => name !== CACHE_NAME)
-          .map(name => caches.delete(name))
-      );
-    })
+    Promise.all([
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames
+            .filter(name => name !== CACHE_NAME)
+            .map(name => caches.delete(name))
+        );
+      }),
+
+      self.registration.navigationPreload
+        ? self.registration.navigationPreload.enable()
+        : Promise.resolve()
+    ])
   );
 
   self.clients.claim();
 });
 
-/* Network first, cached copy as a fallback */
+/* Fast app loading with cached local assets */
 self.addEventListener("fetch", event => {
 
   if (event.request.method !== "GET") {
     return;
   }
 
+  const requestUrl =
+    new URL(event.request.url);
+
+  /*
+    Do not cache or intercept requests to other
+    websites, Microsoft Forms or Cloudflare APIs.
+  */
+  if (requestUrl.origin !== self.location.origin) {
+    return;
+  }
+
+  /*
+    Website page navigation:
+    use the stored local page immediately when available.
+    If no cached page exists, use the preloaded response
+    or fetch the page from the network.
+  */
+  if (event.request.mode === "navigate") {
+
+    event.respondWith(
+      (async () => {
+
+        const cachedResponse =
+          await caches.match(event.request);
+
+        if (cachedResponse) {
+
+          /*
+            Refresh the cached page quietly
+            for the next launch.
+          */
+          event.waitUntil(
+            fetch(event.request)
+              .then(response => {
+
+                if (response.ok) {
+                  return caches
+                    .open(CACHE_NAME)
+                    .then(cache =>
+                      cache.put(
+                        event.request,
+                        response.clone()
+                      )
+                    );
+                }
+
+              })
+              .catch(() => undefined)
+          );
+
+          return cachedResponse;
+        }
+
+        const preloadResponse =
+          await event.preloadResponse;
+
+        if (preloadResponse) {
+
+          const copy =
+            preloadResponse.clone();
+
+          event.waitUntil(
+            caches
+              .open(CACHE_NAME)
+              .then(cache =>
+                cache.put(
+                  event.request,
+                  copy
+                )
+              )
+          );
+
+          return preloadResponse;
+        }
+
+        try {
+
+          const networkResponse =
+            await fetch(event.request);
+
+          if (networkResponse.ok) {
+
+            const copy =
+              networkResponse.clone();
+
+            event.waitUntil(
+              caches
+                .open(CACHE_NAME)
+                .then(cache =>
+                  cache.put(
+                    event.request,
+                    copy
+                  )
+                )
+            );
+          }
+
+          return networkResponse;
+
+        } catch (error) {
+
+          return (
+            await caches.match("/index.html")
+          ) || Response.error();
+
+        }
+
+      })()
+    );
+
+    return;
+  }
+
+  /*
+    Local CSS, JavaScript and images:
+    serve from cache first for fast startup.
+    Refresh the cached copy in the background.
+  */
   event.respondWith(
-    fetch(event.request)
-      .then(response => {
+    (async () => {
 
-        const copy = response.clone();
+      const cachedResponse =
+        await caches.match(event.request);
 
-        caches.open(CACHE_NAME)
-  .then(cache => cache.put(event.request, copy));
+      const networkPromise =
+        fetch(event.request)
+          .then(response => {
 
-return response;
-})
-.catch(() => caches.match(event.request))
-);
+            if (response.ok) {
+
+              const copy =
+                response.clone();
+
+              event.waitUntil(
+                caches
+                  .open(CACHE_NAME)
+                  .then(cache =>
+                    cache.put(
+                      event.request,
+                      copy
+                    )
+                  )
+              );
+
+            }
+
+            return response;
+          })
+          .catch(() => undefined);
+
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      return (
+        await networkPromise
+      ) || Response.error();
+
+    })()
+  );
 });
 
 /* =========================================================
