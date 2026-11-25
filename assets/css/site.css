@@ -671,3 +671,19 @@ a {
     min-height: 68px;
   }
 }
+
+/* =========================================================
+   PWA-ONLY CONTENT
+   ========================================================= */
+
+/* Hidden in regular browser / laptop mode */
+#notificationCard {
+  display: none !important;
+}
+
+/* Show only when running as the installed PWA */
+@media (display-mode: standalone) {
+  #notificationCard {
+    display: block !important;
+  }
+}
