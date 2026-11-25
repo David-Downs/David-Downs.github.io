@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Know Your Rights | UMWA Local 8982</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/images/umwa-logo.png">
+
+  <meta
+    name="theme-color"
+    content="#d5a328">
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css">
+
+  <style>
+
+    .rights-hero {
+      padding: 85px 24px 65px;
+
+      background:
+        radial-gradient(
+          circle at 50% 15%,
+          rgba(213, 163, 40, 0.16),
+          transparent 38%
+        ),
+        #090909;
+
+      text-align: center;
+    }
+
+    .rights-hero h1 {
+      margin: 0;
+
+      font-size:
+        clamp(3rem, 9vw, 6rem);
+
+      line-height: 0.95;
+    }
+
+    .rights-hero h1 span {
+      color: var(--gold);
+    }
+
+    .rights-hero .intro {
+      max-width: 760px;
+
+      margin:
+        24px auto 0;
+
+      color: #c7c7c7;
+
+      font-size: 1.05rem;
+      line-height: 1.65;
+    }
+
+    .rights-actions {
+      margin-top: 30px;
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 14px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .rights-notice {
+      max-width: 1000px;
+
+      margin: 35px auto 0;
+
+      padding: 24px;
+
+      background: #f3f3f0;
+
+      color: #171717;
+
+      border-left:
+        7px solid var(--gold);
+
+      border-radius: 8px;
+
+      text-align: left;
+    }
+
+    .rights-notice strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 1.05rem;
+    }
+
+    .rights-notice p {
+      margin: 0;
+
+      color: #444444;
+
+      line-height: 1.55;
+    }
+
+
+    .rights-section {
+      padding: 70px 24px;
+    }
+
+    .rights-section.dark {
+      background: #101010;
+    }
+
+    .rights-section.black {
+      background: #090909;
+    }
+
+    .rights-container {
+      max-width: 1100px;
+
+      margin: auto;
+    }
+
+    .rights-heading {
+      max-width: 720px;
+
+      margin-bottom: 35px;
+    }
+
+    .rights-heading h2 {
+      margin: 5px 0 10px;
+
+      font-size:
+        clamp(2rem, 5vw, 3.2rem);
+    }
+
+    .rights-heading p {
+      margin: 0;
+
+      color: #aaa;
+
+      line-height: 1.6;
+    }
+
+
+    .rights-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 20px;
+    }
+
+    .right-card {
+      padding: 30px;
+
+      background: #181818;
+
+      border:
+        1px solid #303030;
+
+      border-top:
+        4px solid var(--gold);
+
+      border-radius: 9px;
+    }
+
+    .right-icon {
+      margin-bottom: 14px;
+
+      font-size: 2rem;
+    }
+
+    .right-card h3 {
+      margin: 0 0 8px;
+
+      color: #fff;
+
+      font-size: 1.3rem;
+    }
+
+    .right-card p {
+      margin: 0 0 18px;
+
+      color: #aaa;
+
+      line-height: 1.55;
+    }
+
+    .right-link {
+      color: var(--gold-light);
+
+      font-size: 0.82rem;
+
+      font-weight: 900;
+
+      letter-spacing: 0.7px;
+
+      text-decoration: none;
+
+      text-transform: uppercase;
+    }
+
+    .right-link:hover {
+      text-decoration: underline;
+    }
+
+
+    .rights-detail {
+      margin-top: 25px;
+
+      padding: 30px;
+
+      background: #161616;
+
+      border:
+        1px solid #303030;
+
+      border-radius: 9px;
+    }
+
+    .rights-detail h3 {
+      margin: 0 0 12px;
+
+      color: var(--gold-light);
+
+      font-size: 1.4rem;
+    }
+
+    .rights-detail p {
+      color: #c0c0c0;
+
+      line-height: 1.65;
+    }
+
+
+    .plain-language {
+      margin: 22px 0;
+
+      padding: 20px;
+
+      background: #202020;
+
+      border-left:
+        5px solid var(--gold);
+
+      border-radius: 6px;
+    }
+
+    .plain-language strong {
+      display: block;
+
+      margin-bottom: 7px;
+
+      color: #fff;
+    }
+
+
+    .what-to-say {
+      margin: 24px 0;
+
+      padding: 24px;
+
+      background: var(--gold);
+
+      color: #090909;
+
+      border-radius: 8px;
+    }
+
+    .what-to-say strong {
+      display: block;
+
+      margin-bottom: 8px;
+
+      font-size: 0.8rem;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+    }
+
+    .what-to-say p {
+      margin: 0;
+
+      color: #090909;
+
+      font-size: 1.05rem;
+
+      font-weight: 800;
+
+      line-height: 1.5;
+    }
+
+
+    .official-source {
+      margin-top: 18px;
+
+      font-size: 0.82rem;
+    }
+
+
+    @media (max-width: 750px) {
+
+      .rights-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .rights-hero {
+        padding:
+          65px 20px 50px;
+      }
+
+      .right-card,
+      .rights-detail {
+        padding: 24px 20px;
+      }
+
+      .rights-actions .button {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <div class="header-inner">
+
+      <div class="brand">
+
+        <a
+          class="brand-link"
+          href="/">
+
+          <img
+            class="umwa-logo"
+            src="/assets/images/umwa-logo.png"
+            alt="United Mine Workers of America"
+            style="
+              width:130px !important;
+              height:45px !important;
+              max-width:130px !important;
+              max-height:45px !important;
+              object-fit:contain !important;
+            ">
+
+          <span class="local-number">
+            LOCAL 8982
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <nav class="main-nav">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="#union-rights">
+          Union Rights
+        </a>
+
+        <a href="#mine-rights">
+          Mine Safety Rights
+        </a>
+
+        <a href="#help">
+          Get Help
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="rights-hero">
+
+      <p class="eyebrow">
+        UMWA LOCAL 8982
+      </p>
+
+      <h1>
+        KNOW YOUR
+        <span>RIGHTS</span>
+      </h1>
+
+      <p class="intro">
+        Understanding your rights on the job can help you
+        recognize when to request union representation,
+        raise a workplace concern, report a safety issue,
+        or contact Local 8982.
+      </p>
+
+      <div class="rights-actions">
+
+        <a
+          class="button button-gold"
+          href="mailto:contact@umwa8982.org">
+          Contact Local 8982
+        </a>
+
+        <a
+          class="button button-outline"
+          href="https://members.umwa8982.org">
+          Member Resources
+        </a>
+
+      </div>
+
+
+      <div class="rights-notice">
+
+        <strong>
+          Know before you act.
+        </strong>
+
+        <p>
+          This page provides general educational information
+          and links to official government resources. Individual
+          situations can be different. If discipline, retaliation,
+          a safety issue, or a possible grievance may be involved,
+          contact a Local 8982 representative promptly.
+        </p>
+
+      </div>
+
+    </section>
+
+        <!-- UNION & WORKPLACE RIGHTS -->
+
+    <section
+      id="union-rights"
+      class="rights-section dark">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            UNION & WORKPLACE
+          </p>
+
+          <h2>
+            Know Your Rights on the Job
+          </h2>
+
+          <p>
+            These rights can come into play during
+            management questioning, discussions with
+            coworkers, union representation and other
+            workplace situations.
+          </p>
+
+        </div>
+
+
+        <div class="rights-grid">
+
+
+          <!-- WEINGARTEN -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⚒️
+            </div>
+
+            <h3>
+              Weingarten Rights
+            </h3>
+
+            <p>
+              Learn when a union-represented employee can
+              request union representation during an
+              investigatory interview that the employee
+              reasonably believes could result in discipline.
+            </p>
+
+            <a
+              class="right-link"
+              href="#weingarten">
+              Know What to Say →
+            </a>
+
+          </article>
+
+
+          <!-- PROTECTED CONCERTED ACTIVITY -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              👥
+            </div>
+
+            <h3>
+              Protected Concerted Activity
+            </h3>
+
+            <p>
+              Learn about federal protections that may apply
+              when employees act together concerning wages,
+              hours and other workplace conditions.
+            </p>
+
+            <a
+              class="right-link"
+              href="#concerted-activity">
+              Learn More →
+            </a>
+
+          </article>
+
+
+          <!-- WAGES -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              💰
+            </div>
+
+            <h3>
+              Discussing Wages
+            </h3>
+
+            <p>
+              Understand federal protections concerning
+              employee discussions about wages and pay.
+            </p>
+
+            <a
+              class="right-link"
+              href="#wages">
+              Know the Rule →
+            </a>
+
+          </article>
+
+
+          <!-- FAIR REPRESENTATION -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              🤝
+            </div>
+
+            <h3>
+              Fair Union Representation
+            </h3>
+
+            <p>
+              Learn about the union's duty to represent
+              employees fairly, in good faith and without
+              discrimination.
+            </p>
+
+            <a
+              class="right-link"
+              href="#fair-representation">
+              Understand the Right →
+            </a>
+
+          </article>
+
+
+          <!-- RIGHT TO WORK VS AT WILL -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⚖️
+            </div>
+
+            <h3>
+              Right-to-Work vs. At-Will
+            </h3>
+
+            <p>
+              These are two different concepts that are
+              commonly confused. Learn what each term means
+              and why a union contract matters.
+            </p>
+
+            <a
+              class="right-link"
+              href="#right-to-work">
+              Understand the Difference →
+            </a>
+
+          </article>
+
+
+          <!-- UNION CONTRACT -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              📄
+            </div>
+
+            <h3>
+              Your Union Contract
+            </h3>
+
+            <p>
+              The collective bargaining agreement can provide
+              important contractual rights and grievance or
+              arbitration procedures beyond general workplace
+              law.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://members.umwa8982.org">
+              Member Resources →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- MINE SAFETY & HEALTH RIGHTS -->
+
+    <section
+      id="mine-rights"
+      class="rights-section black">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            MINE SAFETY & HEALTH
+          </p>
+
+          <h2>
+            Miners' Rights
+          </h2>
+
+          <p>
+            Federal mine-safety law provides miners with
+            important rights involving hazardous conditions,
+            inspections, safety complaints, representation
+            and protection from retaliation.
+          </p>
+
+        </div>
+
+
+        <div class="rights-grid">
+
+
+          <!-- HAZARDOUS CONDITIONS -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⚠️
+            </div>
+
+            <h3>
+              Report a Hazardous Condition
+            </h3>
+
+            <p>
+              Learn about reporting mine safety or health
+              concerns and the options available through
+              Local 8982 and MSHA.
+            </p>
+
+            <a
+              class="right-link"
+              href="#hazardous-condition">
+              Know Your Options →
+            </a>
+
+          </article>
+
+
+          <!-- 103G -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⛏️
+            </div>
+
+            <h3>
+              Section 103(g)
+            </h3>
+
+            <p>
+              Learn about a miner's or miners'
+              representative's ability to request an MSHA
+              inspection when specified safety or health
+              concerns may exist.
+            </p>
+
+            <a
+              class="right-link"
+              href="#section-103g">
+              Understand 103(g) →
+            </a>
+
+          </article>
+
+
+          <!-- 105C -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              🛡️
+            </div>
+
+            <h3>
+              Section 105(c)
+            </h3>
+
+            <p>
+              Learn about protections against discrimination
+              or retaliation for exercising protected safety
+              and health rights under the Mine Act.
+            </p>
+
+            <a
+              class="right-link"
+              href="#section-105c">
+              Understand 105(c) →
+            </a>
+
+          </article>
+
+
+          <!-- UNSAFE WORK -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              🛑
+            </div>
+
+            <h3>
+              Unsafe or Unhealthy Work
+            </h3>
+
+            <p>
+              Learn about MSHA's guidance concerning miners'
+              rights when they believe work conditions are
+              unsafe, unhealthy or illegal.
+            </p>
+
+            <a
+              class="right-link"
+              href="#unsafe-work">
+              Know the Right →
+            </a>
+
+          </article>
+
+
+          <!-- MINERS REPRESENTATIVE -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              👷
+            </div>
+
+            <h3>
+              Miners' Representative Rights
+            </h3>
+
+            <p>
+              Learn about miners' rights to select a
+              representative for safety and health purposes
+              and the representative's role under the Mine Act.
+            </p>
+
+            <a
+              class="right-link"
+              href="#miners-representative">
+              Learn More →
+            </a>
+
+          </article>
+
+
+          <!-- MSHA -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              📞
+            </div>
+
+            <h3>
+              Official MSHA Resources
+            </h3>
+
+            <p>
+              Go directly to official Mine Safety and Health
+              Administration information about miners'
+              rights, hazardous conditions and safety.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/safety-and-health/safety-and-health-materials/miners-rights-and-responsibilities"
+              target="_blank"
+              rel="noopener noreferrer">
+              Visit MSHA →
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- WEINGARTEN RIGHTS DETAIL -->
+
+    <section
+      id="weingarten"
+      class="rights-section dark">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            UNION REPRESENTATION
+          </p>
+
+          <h2>
+            Weingarten Rights
+          </h2>
+
+          <p>
+            Union-represented employees may have the right
+            to request union representation during certain
+            investigatory interviews that could lead to
+            discipline.
+          </p>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            Plain English
+          </h3>
+
+          <p>
+            If management is questioning you as part of an
+            investigation, and you reasonably believe the
+            questioning could result in discipline, you may
+            request that a union representative be present.
+          </p>
+
+          <div class="plain-language">
+
+            <strong>
+              Important:
+            </strong>
+
+            The employee generally must request representation.
+            Management is not required to automatically provide
+            a union representative or remind the employee about
+            this right.
+
+          </div>
+
+
+          <h3>
+            When Might This Apply?
+          </h3>
+
+          <p>
+            A Weingarten issue may arise when management asks
+            questions to obtain information as part of an
+            investigation and the employee reasonably believes
+            the answers could result in discipline.
+          </p>
+
+          <p>
+            Not every conversation with management qualifies.
+            The circumstances and purpose of the discussion
+            matter.
+          </p>
+
+
+          <div class="what-to-say">
+
+            <strong>
+              What Can I Say?
+            </strong>
+
+            <p>
+              “If this discussion could in any way lead to me
+              being disciplined or terminated, I respectfully
+              request that my union representative be present
+              before I answer questions.”
+            </p>
+
+          </div>
+
+
+          <h3>
+            What Should I Do?
+          </h3>
+
+          <p>
+            Clearly request union representation. If you are
+            unsure whether the discussion may involve discipline,
+            contact a Local 8982 representative as soon as
+            possible.
+          </p>
+
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.nlrb.gov/about-nlrb/rights-we-protect/your-rights/weingarten-rights"
+              target="_blank"
+              rel="noopener noreferrer">
+              NLRB – Weingarten Rights
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- PROTECTED CONCERTED ACTIVITY -->
+
+    <section
+      id="concerted-activity"
+      class="rights-section black">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            WORKING TOGETHER
+          </p>
+
+          <h2>
+            Protected Concerted Activity
+          </h2>
+
+          <p>
+            Federal labor law can protect employees who act
+            together concerning wages, hours and other terms
+            and conditions of employment.
+          </p>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            Plain English
+          </h3>
+
+          <p>
+            Employees may have protection when two or more
+            employees act together concerning workplace issues,
+            or when one employee acts on behalf of or seeks to
+            involve other employees in a group workplace concern.
+          </p>
+
+          <div class="plain-language">
+
+            <strong>
+              Examples may include:
+            </strong>
+
+            Talking with coworkers about workplace conditions,
+            bringing a group concern to management, circulating
+            a petition, or acting together concerning wages,
+            hours, safety or other working conditions.
+
+          </div>
+
+          <h3>
+            Important
+          </h3>
+
+          <p>
+            Whether particular conduct is protected depends on
+            the circumstances. If management questions or
+            disciplines you concerning workplace activity with
+            other employees, contact Local 8982 promptly.
+          </p>
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.nlrb.gov/about-nlrb/rights-we-protect/your-rights/employee-rights"
+              target="_blank"
+              rel="noopener noreferrer">
+              NLRB – Employee Rights
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- DISCUSSING WAGES -->
+
+    <section
+      id="wages"
+      class="rights-section dark">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            PAY & WORKING CONDITIONS
+          </p>
+
+          <h2>
+            Discussing Your Wages
+          </h2>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            Can Employees Talk About Pay?
+          </h3>
+
+          <p>
+            Employees covered by the National Labor Relations
+            Act generally have the right to communicate with
+            coworkers about wages and other terms and conditions
+            of employment.
+          </p>
+
+          <div class="plain-language">
+
+            <strong>
+              Plain English:
+            </strong>
+
+            Simply because pay information is personal does not
+            automatically mean employees lose federal labor-law
+            protections when discussing their own wages with
+            coworkers.
+
+          </div>
+
+          <h3>
+            Situations Can Differ
+          </h3>
+
+          <p>
+            Federal labor-law coverage and the circumstances of
+            a particular workplace rule or conversation matter.
+            Contact Local 8982 if you believe management is
+            interfering with protected workplace discussions.
+          </p>
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.nlrb.gov/about-nlrb/rights-we-protect/your-rights/employee-rights"
+              target="_blank"
+              rel="noopener noreferrer">
+              NLRB – Employee Rights
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- FAIR REPRESENTATION -->
+
+    <section
+      id="fair-representation"
+      class="rights-section black">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            UNION REPRESENTATION
+          </p>
+
+          <h2>
+            Duty of Fair Representation
+          </h2>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            The Union Has Responsibilities Too
+          </h3>
+
+          <p>
+            A union that represents employees has a duty to
+            represent employees in the bargaining unit fairly,
+            in good faith and without unlawful discrimination.
+          </p>
+
+          <p>
+            This duty can apply to collective bargaining,
+            grievance handling and other matters in which the
+            union acts as the employees' exclusive bargaining
+            representative.
+          </p>
+
+          <div class="plain-language">
+
+            <strong>
+              Important:
+            </strong>
+
+            This does not necessarily mean every grievance must
+            be filed, advanced or taken to arbitration. Decisions
+            may depend on the facts, the collective bargaining
+            agreement and the circumstances of the case.
+          </div>
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.nlrb.gov/about-nlrb/rights-we-protect/the-law/employees/right-to-fair-representation"
+              target="_blank"
+              rel="noopener noreferrer">
+              NLRB – Right to Fair Representation
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- RIGHT-TO-WORK VS AT-WILL -->
+
+    <section
+      id="right-to-work"
+      class="rights-section dark">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            COMMONLY CONFUSED
+          </p>
+
+          <h2>
+            Right-to-Work vs. At-Will
+          </h2>
+
+          <p>
+            These terms deal with different legal concepts.
+            Neither term, by itself, tells a Local 8982 member
+            whether a particular discipline or discharge is
+            permitted.
+          </p>
+
+        </div>
+
+
+        <div class="rights-grid">
+
+
+          <!-- RIGHT TO WORK -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⚖️
+            </div>
+
+            <h3>
+              Right-to-Work
+            </h3>
+
+            <p>
+              Right-to-work generally concerns union membership
+              or financial support as a condition of employment.
+            </p>
+
+            <div class="plain-language">
+
+              <strong>
+                It does not mean:
+              </strong>
+
+              that an employee has a guaranteed “right to a job,”
+              or that an employer automatically has an unlimited
+              right to discipline or discharge an employee.
+
+            </div>
+
+          </article>
+
+
+          <!-- AT WILL -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              📋
+            </div>
+
+            <h3>
+              At-Will Employment
+            </h3>
+
+            <p>
+              At-will employment is a different employment-law
+              concept involving when an employment relationship
+              may be ended.
+            </p>
+
+            <div class="plain-language">
+
+              <strong>
+                Important:
+              </strong>
+
+              Even where an at-will rule applies generally,
+              applicable laws and enforceable contractual
+              obligations may affect a particular termination.
+
+            </div>
+
+          </article>
+
+        </div>
+
+
+        <!-- LOCAL 8982 CONTRACT -->
+
+        <div
+          id="just-cause"
+          class="rights-detail"
+          style="margin-top: 25px;">
+
+          <p class="eyebrow">
+            LOCAL 8982 CONTRACT
+          </p>
+
+          <h3>
+            Local 8982 Members Have Just-Cause Protection
+          </h3>
+
+          <p>
+            Local 8982 members work under a collective bargaining
+            agreement. The agreement requires just cause for
+            discharge and provides contractual grievance
+            procedures for disputes arising under the agreement.
+          </p>
+
+          <div class="what-to-say">
+
+            <strong>
+              Disciplined, Suspended or Discharged?
+            </strong>
+
+            <p>
+              Do not assume that “Alabama is right-to-work” or
+              general at-will employment principles end the
+              conversation. Your union contract, the facts,
+              applicable law and grievance deadlines may all
+              matter. Contact Local 8982 promptly.
+            </p>
+
+          </div>
+
+
+          <h3>
+            Why the Contract Matters
+          </h3>
+
+          <p>
+            A collective bargaining agreement creates contractual
+            rights and responsibilities between the employer and
+            the union. Local 8982's agreement contains a discharge
+            procedure requiring just cause, along with grievance
+            and arbitration procedures for resolving covered
+            disputes.
+          </p>
+
+
+          <div class="plain-language">
+
+            <strong>
+              Plain English:
+            </strong>
+
+            “Right-to-work,” “at-will,” and “just cause” are not
+            interchangeable terms. For a Local 8982 member facing
+            discipline or discharge, the collective bargaining
+            agreement can be critically important.
+
+          </div>
+
+
+          <div class="rights-actions">
+
+            <a
+              class="button button-gold"
+              href="https://members.umwa8982.org">
+              View Member Resources
+            </a>
+
+            <a
+              class="button button-outline"
+              href="mailto:contact@umwa8982.org">
+              Contact Local 8982
+            </a>
+
+          </div>
+
+
+          <p class="official-source">
+
+            Federal labor-law background:
+
+            <a
+              class="right-link"
+              href="https://www.nlrb.gov/about-nlrb/rights-we-protect/the-law"
+              target="_blank"
+              rel="noopener noreferrer">
+              National Labor Relations Board
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- HAZARDOUS CONDITIONS -->
+
+    <section
+      id="hazardous-condition"
+      class="rights-section black">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            SAFETY & HEALTH CONCERNS
+          </p>
+
+          <h2>
+            Reporting a Hazardous Condition
+          </h2>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            You Have the Right to Speak Up About Safety
+          </h3>
+
+          <p>
+            MSHA states that miners have the right to file or
+            make a complaint about a safety or health violation
+            to a federal or state agency, the mine operator,
+            an operator's agent or a miners' representative.
+          </p>
+
+          <div class="plain-language">
+
+            <strong>
+              Anonymous Reporting to MSHA
+            </strong>
+
+            MSHA states that you do not need to identify
+            yourself when reporting a hazardous condition
+            through its hazardous-condition reporting system.
+
+          </div>
+
+
+          <h3>
+            Local 8982 or MSHA?
+          </h3>
+
+          <p>
+            You may report a safety concern to Local 8982 so
+            the Safety Committee can review the condition.
+            You may also report hazardous conditions directly
+            to MSHA.
+          </p>
+
+          <p>
+            Submitting Local 8982's Safety Concern Report does
+            not itself file an official complaint or formal
+            inspection request with MSHA.
+          </p>
+
+
+          <div class="rights-actions">
+
+            <a
+              class="button button-gold"
+              href="https://forms.cloud.microsoft/r/QkSPPJgt4G"
+              target="_blank"
+              rel="noopener noreferrer">
+              Report to Local 8982
+            </a>
+
+            <a
+              class="button button-outline"
+              href="https://www.msha.gov/news-and-updates/hazards-alerts"
+              target="_blank"
+              rel="noopener noreferrer">
+              Visit MSHA
+            </a>
+
+          </div>
+
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/safety-and-health/safety-and-health-materials/miners-rights-and-responsibilities"
+              target="_blank"
+              rel="noopener noreferrer">
+              MSHA – Miners' Rights and Responsibilities
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SECTION 103G -->
+
+    <section
+      id="section-103g"
+      class="rights-section dark">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            REQUESTING AN MSHA INSPECTION
+          </p>
+
+          <h2>
+            Section 103(g)
+          </h2>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            What Is a Formal 103(g) Request?
+          </h3>
+
+          <p>
+            Section 103(g)(1) of the Mine Act provides that a
+            miner or miners' representative may request an
+            immediate MSHA inspection when there are reasonable
+            grounds to believe that an imminent danger, a
+            violation of the Mine Act, or a violation of a
+            mandatory safety or health standard exists.
+          </p>
+
+
+          <div class="plain-language">
+
+            <strong>
+              A Formal Request Has Requirements
+            </strong>
+
+            MSHA states that a formal Section 103(g)(1) request
+            for inspection must be given to MSHA in writing and
+            signed by the miner or miners' representative.
+
+          </div>
+
+
+          <h3>
+            What About My Identity?
+          </h3>
+
+          <p>
+            MSHA provides a copy of a formal 103(g)(1) complaint
+            to the mine operator before or during the inspection.
+            However, MSHA states that it takes reasonable steps
+            to maintain the confidentiality of the complainant.
+          </p>
+
+          <p>
+            MSHA may remove the complainant's name and may
+            rewrite information concerning a particular work
+            area, equipment or work shift when those details
+            could reveal the complainant's identity.
+          </p>
+
+
+          <div class="what-to-say">
+
+            <strong>
+              Important
+            </strong>
+
+            <p>
+              A Local 8982 Safety Concern Report is not
+              automatically a formal Section 103(g) request.
+              Contact a Local safety representative or MSHA
+              promptly if you believe a formal inspection
+              request may be necessary.
+            </p>
+
+          </div>
+
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/compliance-and-enforcement/compliance-assistance/program-information-bulletins/p10-16"
+              target="_blank"
+              rel="noopener noreferrer">
+              MSHA – Hazardous Condition Complaints and
+              Right to Request Inspections
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SECTION 105C -->
+
+    <section
+      id="section-105c"
+      class="rights-section black">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            RETALIATION & DISCRIMINATION
+          </p>
+
+          <h2>
+            Section 105(c)
+          </h2>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            Protection for Exercising Mine Act Rights
+          </h3>
+
+          <p>
+            MSHA states that Section 105(c) prohibits
+            discrimination against miners, applicants for
+            employment and representatives of miners for
+            exercising statutory rights under the Mine Act.
+          </p>
+
+          <p>
+            Protected safety and health activity can include
+            identifying hazards, requesting an MSHA inspection,
+            making a safety or health complaint, participating
+            in Mine Act proceedings, and qualifying refusals
+            to engage in unsafe acts.
+          </p>
+
+
+          <div class="plain-language">
+
+            <strong>
+              Examples Identified by MSHA
+            </strong>
+
+            Potentially discriminatory actions can include
+            discharge, suspension, loss of pay, demotion,
+            changes in pay or hours, reductions in benefits,
+            vacation, bonuses or overtime, and interference
+            with the exercise of Mine Act rights.
+
+          </div>
+
+
+          <div class="what-to-say">
+
+            <strong>
+              Time Can Matter
+            </strong>
+
+            <p>
+              MSHA's miners' rights materials state that a
+              discrimination complaint generally must be filed
+              within 60 days of the discriminatory event.
+              If you believe you are being retaliated against
+              for protected mine-safety or health activity,
+              contact Local 8982 and MSHA promptly.
+            </p>
+
+          </div>
+
+
+          <p>
+            Do not rely solely on Local 8982's online Safety
+            Concern Report when you believe discrimination or
+            retaliation may be occurring. An official Section
+            105(c) complaint is a separate MSHA process.
+          </p>
+
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/compliance-and-enforcement/compliance-assistance/program-information-bulletins/p10-17"
+              target="_blank"
+              rel="noopener noreferrer">
+              MSHA – Section 105(c) Discrimination Protections
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- UNSAFE OR UNHEALTHY WORK -->
+
+    <section
+      id="unsafe-work"
+      class="rights-section dark">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            UNSAFE OR UNHEALTHY CONDITIONS
+          </p>
+
+          <h2>
+            Refusing Unsafe or Unhealthy Work
+          </h2>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            What Does MSHA Say?
+          </h3>
+
+          <p>
+            MSHA states that miners have the right to refuse
+            work in conditions they believe are unsafe,
+            unhealthy or illegal after notifying the operator
+            of the condition and giving the operator an
+            opportunity to address the situation.
+          </p>
+
+          <p>
+            MSHA's Section 105(c) guidance also describes a
+            protected work refusal as involving a good-faith,
+            reasonable belief that a specific working condition
+            threatens the miner's health or safety.
+          </p>
+
+
+          <div class="what-to-say">
+
+            <strong>
+              Specific Facts Matter
+            </strong>
+
+            <p>
+              Do not reduce this right to “I can refuse any job
+              I think is unsafe.” The condition, the miner's
+              belief, notice to the operator, and other facts
+              can matter. Notify the operator of the condition
+              and contact a Local 8982 safety representative
+              promptly.
+            </p>
+
+          </div>
+
+
+          <p class="official-source">
+
+            Official sources:
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/safety-and-health/safety-and-health-materials/miners-rights-and-responsibilities"
+              target="_blank"
+              rel="noopener noreferrer">
+              MSHA – Miners' Rights
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/compliance-and-enforcement/compliance-assistance/program-information-bulletins/p10-17"
+              target="_blank"
+              rel="noopener noreferrer">
+              MSHA – Section 105(c) Guidance
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- MINERS REPRESENTATIVE -->
+
+    <section
+      id="miners-representative"
+      class="rights-section black">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            SAFETY REPRESENTATION
+          </p>
+
+          <h2>
+            Miners' Representative Rights
+          </h2>
+
+        </div>
+
+
+        <div class="rights-detail">
+
+          <h3>
+            What Is a Miners' Representative?
+          </h3>
+
+          <p>
+            MSHA defines a miners' representative as a person,
+            group or organization designated by two or more
+            miners to represent their interests during mine
+            safety and health enforcement processes.
+          </p>
+
+
+          <h3>
+            What Can a Representative Do?
+          </h3>
+
+          <p>
+            MSHA describes miners' representatives as having an
+            important role in safety and health enforcement,
+            including reporting hazards and unsafe conditions,
+            providing worksite information to inspectors, and
+            participating in inspection-related activities.
+          </p>
+
+
+          <div class="plain-language">
+
+            <strong>
+              Why It Matters
+            </strong>
+
+            A miners' representative can bring practical
+            knowledge of the workplace and miners' safety
+            concerns into MSHA inspection and enforcement
+            processes.
+
+          </div>
+
+
+          <p class="official-source">
+
+            Official source:
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/training/training-programs-and-courses/miners-representative-guide"
+              target="_blank"
+              rel="noopener noreferrer">
+              MSHA – Miners' Representative Guide
+            </a>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- WHAT SHOULD I DO? -->
+
+    <section
+      id="help"
+      class="rights-section dark">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            QUICK HELP
+          </p>
+
+          <h2>
+            What Should I Do?
+          </h2>
+
+          <p>
+            You do not need to know the exact law, contract
+            article or regulation before contacting the Local.
+            If something does not seem right, ask for help.
+          </p>
+
+        </div>
+
+
+        <div class="rights-grid">
+
+
+          <!-- MANAGEMENT MEETING -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              🗣️
+            </div>
+
+            <h3>
+              Management Wants to Question Me
+            </h3>
+
+            <p>
+              If management is questioning you as part of an
+              investigation that you reasonably believe could
+              lead to discipline, Weingarten rights may be
+              involved.
+            </p>
+
+            <a
+              class="right-link"
+              href="#weingarten">
+              Review Weingarten Rights →
+            </a>
+
+          </article>
+
+
+          <!-- UNSAFE CONDITION -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⚠️
+            </div>
+
+            <h3>
+              I Think Something Is Unsafe
+            </h3>
+
+            <p>
+              Report the condition through the appropriate
+              workplace safety process and contact a Local 8982
+              safety representative if you want the Local to
+              review the concern.
+            </p>
+
+            <a
+              class="right-link"
+              href="#hazardous-condition">
+              Safety Reporting Options →
+            </a>
+
+          </article>
+
+
+          <!-- RETALIATION -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              🛡️
+            </div>
+
+            <h3>
+              I Think I'm Being Retaliated Against
+            </h3>
+
+            <p>
+              If you believe an adverse action is connected to
+              exercising protected mine-safety or health rights,
+              Section 105(c) may be involved and filing time
+              limits can matter.
+            </p>
+
+            <a
+              class="right-link"
+              href="#section-105c">
+              Review 105(c) →
+            </a>
+
+          </article>
+
+
+          <!-- DISCIPLINE -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              📄
+            </div>
+
+            <h3>
+              I Was Disciplined or Discharged
+            </h3>
+
+            <p>
+              Local 8982's collective bargaining agreement
+              contains contractual protections, including its
+              just-cause requirement. Contact the Local promptly
+              so applicable facts, contract provisions and
+              deadlines can be reviewed.
+            </p>
+
+            <a
+              class="right-link"
+              href="#just-cause">
+              Review Contract Protections →
+            </a>
+
+          </article>
+
+
+          <!-- GRIEVANCE -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              📝
+            </div>
+
+            <h3>
+              I Think I May Have a Grievance
+            </h3>
+
+            <p>
+              Use Member Resources to submit the Local 8982
+              Potential Grievance Questionnaire for review by
+              a union representative.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://members.umwa8982.org">
+              Go to Member Resources →
+            </a>
+
+          </article>
+
+
+          <!-- DON'T KNOW -->
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ❓
+            </div>
+
+            <h3>
+              I Don't Know Which Right Applies
+            </h3>
+
+            <p>
+              That's okay. You do not need to diagnose the legal
+              issue yourself. Contact Local 8982 and explain what
+              happened.
+            </p>
+
+            <a
+              class="right-link"
+              href="mailto:contact@umwa8982.org">
+              Contact Local 8982 →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- OFFICIAL RESOURCES -->
+
+    <section class="rights-section black">
+
+      <div class="rights-container">
+
+        <div class="rights-heading">
+
+          <p class="eyebrow">
+            OFFICIAL SOURCES
+          </p>
+
+          <h2>
+            Learn More From the Agencies
+          </h2>
+
+          <p>
+            Use these links to read the official government
+            information behind the rights summarized on this
+            page.
+          </p>
+
+        </div>
+
+
+        <div class="rights-grid">
+
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⚒️
+            </div>
+
+            <h3>
+              NLRB – Weingarten Rights
+            </h3>
+
+            <p>
+              Official National Labor Relations Board guidance
+              about requesting union representation during
+              qualifying investigatory interviews.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://www.nlrb.gov/about-nlrb/rights-we-protect/your-rights/weingarten-rights"
+              target="_blank"
+              rel="noopener noreferrer">
+              Visit NLRB →
+            </a>
+
+          </article>
+
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              👥
+            </div>
+
+            <h3>
+              NLRB – Employee Rights
+            </h3>
+
+            <p>
+              Official information about employee rights under
+              the National Labor Relations Act.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://www.nlrb.gov/about-nlrb/rights-we-protect/your-rights/employee-rights"
+              target="_blank"
+              rel="noopener noreferrer">
+              Visit NLRB →
+            </a>
+
+          </article>
+
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⛏️
+            </div>
+
+            <h3>
+              MSHA – Miners' Rights
+            </h3>
+
+            <p>
+              Official MSHA information about miners' rights and
+              responsibilities under the Mine Act.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/safety-and-health/safety-and-health-materials/miners-rights-and-responsibilities"
+              target="_blank"
+              rel="noopener noreferrer">
+              Visit MSHA →
+            </a>
+
+          </article>
+
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              ⚠️
+            </div>
+
+            <h3>
+              MSHA – Section 103(g)
+            </h3>
+
+            <p>
+              Official MSHA information about hazardous condition
+              complaints and the right to request inspections.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/compliance-and-enforcement/compliance-assistance/program-information-bulletins/p10-16"
+              target="_blank"
+              rel="noopener noreferrer">
+              Read MSHA P10-16 →
+            </a>
+
+          </article>
+
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              🛡️
+            </div>
+
+            <h3>
+              MSHA – Section 105(c)
+            </h3>
+
+            <p>
+              Official MSHA guidance regarding discrimination
+              and retaliation for exercising Mine Act rights.
+            </p>
+
+            <a
+              class="right-link"
+              href="https://www.msha.gov/compliance-and-enforcement/compliance-assistance/program-information-bulletins/p10-17"
+              target="_blank"
+              rel="noopener noreferrer">
+              Read MSHA P10-17 →
+            </a>
+
+          </article>
+
+
+          <article class="right-card">
+
+            <div class="right-icon">
+              📞
+            </div>
+
+            <h3>
+              Need Local Help?
+            </h3>
+
+            <p>
+              Online information cannot account for every set
+              of facts. Contact Local 8982 when you need help
+              understanding how a workplace situation may affect
+              your rights.
+            </p>
+
+            <a
+              class="right-link"
+              href="mailto:contact@umwa8982.org">
+              Email Local 8982 →
+            </a>
+
+          </article>
+
+        </div>
+
+
+        <!-- FINAL NOTICE -->
+
+        <div
+          class="rights-notice"
+          style="margin-top: 35px;">
+
+          <strong>
+            Important
+          </strong>
+
+          <p>
+            This page is intended for general education and
+            awareness. It does not replace the collective
+            bargaining agreement, advice from a Local 8982
+            representative, an official filing with MSHA or the
+            NLRB, or legal advice. Deadlines may apply to
+            grievances, discrimination complaints and other
+            workplace matters.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <strong>
+      UMWA LOCAL 8982
+    </strong>
+
+    <p>
+      United Mine Workers of America
+    </p>
+
+    <p>
+      Know Your Rights
+    </p>
+
+  </footer>
+
+
+</body>
+</html>
