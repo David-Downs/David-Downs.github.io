@@ -775,3 +775,10 @@ a {
     width: 100%;
   }
 }
+
+/* Hide app-install promotion inside installed PWA */
+@media (display-mode: standalone) {
+  .app-install-banner {
+    display: none !important;
+  }
+}
