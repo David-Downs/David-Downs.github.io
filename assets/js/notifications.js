@@ -177,6 +177,13 @@ button.textContent =
 
 button.disabled = true;
 
+    const notificationCard =
+  document.getElementById("notificationCard");
+
+if (notificationCard) {
+  notificationCard.style.display = "none";
+}
+    
   } catch (error) {
 
     console.error(
@@ -204,3 +211,42 @@ if (notificationButton) {
     enableLocal8982Notifications
   );
 }
+
+async function hideNotificationCardIfEnabled() {
+  const card =
+    document.getElementById("notificationCard");
+
+  if (!card) {
+    return;
+  }
+
+  if (
+    !("serviceWorker" in navigator) ||
+    !("PushManager" in window)
+  ) {
+    return;
+  }
+
+  try {
+
+    const registration =
+      await navigator.serviceWorker.ready;
+
+    const subscription =
+      await registration.pushManager.getSubscription();
+
+    if (subscription) {
+      card.style.display = "none";
+    }
+
+  } catch (error) {
+
+    console.error(
+      "Unable to check notification subscription:",
+      error
+    );
+
+  }
+}
+
+hideNotificationCardIfEnabled();
