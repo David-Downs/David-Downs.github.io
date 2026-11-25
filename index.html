@@ -455,6 +455,51 @@
     });
   }
 </script>
+
+  <script>
+  function updateInstalledAppContent() {
+    const isInstalledApp =
+      window.matchMedia(
+        "(display-mode: standalone)"
+      ).matches ||
+      window.navigator.standalone === true;
+
+    const installBanner =
+      document.querySelector(
+        ".app-install-banner"
+      );
+
+    const notificationCard =
+      document.getElementById(
+        "notificationCard"
+      );
+
+    if (isInstalledApp) {
+      if (installBanner) {
+        installBanner.style.display = "none";
+      }
+
+      if (notificationCard) {
+        notificationCard.style.display = "block";
+      }
+    } else {
+      if (installBanner) {
+        installBanner.style.display = "";
+      }
+
+      if (notificationCard) {
+        notificationCard.style.display = "none";
+      }
+    }
+  }
+
+  updateInstalledAppContent();
+
+  window.addEventListener(
+    "DOMContentLoaded",
+    updateInstalledAppContent
+  );
+</script>
   
 </body>
 </html>
