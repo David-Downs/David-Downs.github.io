@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Meeting Center | UMWA Local 8982</title>
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="/assets/images/umwa-logo.png">
+
+  <meta
+    name="theme-color"
+    content="#d5a328">
+
+  <link
+    rel="stylesheet"
+    href="/assets/css/site.css">
+
+  <style>
+
+    .meeting-center-hero {
+      padding: 80px 24px 55px;
+
+      background:
+        radial-gradient(
+          circle at 50% 15%,
+          rgba(213, 163, 40, 0.16),
+          transparent 38%
+        ),
+        #090909;
+
+      text-align: center;
+    }
+
+    .meeting-center-hero h1 {
+      margin: 0;
+
+      font-size:
+        clamp(3rem, 9vw, 6rem);
+
+      line-height: 0.95;
+    }
+
+    .meeting-center-hero h1 span {
+      color: var(--gold);
+    }
+
+    .meeting-center-hero .intro {
+      max-width: 700px;
+
+      margin: 22px auto 0;
+
+      color: #c7c7c7;
+
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+
+    .meeting-center-section {
+      padding: 65px 24px;
+
+      background: #101010;
+    }
+
+    .meeting-center-container {
+      max-width: 1000px;
+
+      margin: auto;
+    }
+
+
+    .meeting-center-card {
+      padding: 34px;
+
+      background: #181818;
+
+      border: 1px solid #303030;
+      border-top: 5px solid var(--gold);
+
+      border-radius: 10px;
+    }
+
+
+    .meeting-info-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.5fr 1fr;
+
+      gap: 30px;
+
+      align-items: center;
+    }
+
+
+    .meeting-center-card h2 {
+      margin: 5px 0 8px;
+
+      color: #ffffff;
+
+      font-size:
+        clamp(1.8rem, 5vw, 2.8rem);
+    }
+
+
+    .meeting-center-date {
+      margin: 14px 0 4px;
+
+      color: var(--gold-light);
+
+      font-size:
+        clamp(1.5rem, 5vw, 2.3rem);
+
+      font-weight: 900;
+    }
+
+
+    .meeting-center-time {
+      margin: 0;
+
+      color: #ffffff;
+
+      font-size: 1.3rem;
+
+      font-weight: 800;
+    }
+
+
+    .meeting-center-location {
+      padding: 24px;
+
+      background: #202020;
+
+      border-radius: 8px;
+    }
+
+    .meeting-center-location strong {
+      display: block;
+
+      margin-bottom: 5px;
+
+      color: #ffffff;
+
+      font-size: 1.1rem;
+    }
+
+    .meeting-center-location span {
+      display: block;
+
+      margin-bottom: 18px;
+
+      color: #aaaaaa;
+    }
+
+
+    .regular-meeting-note {
+      margin: 24px 0 0;
+
+      color: #999999;
+
+      line-height: 1.55;
+    }
+
+
+    @media (max-width: 750px) {
+
+      .meeting-center-hero {
+        padding:
+          60px 20px 45px;
+      }
+
+      .meeting-center-section {
+        padding:
+          45px 20px;
+      }
+
+      .meeting-info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .meeting-center-card {
+        padding:
+          28px 22px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+    
+    <div class="header-inner">
+
+      <div class="brand">
+
+        <a
+          class="brand-link"
+          href="/">
+
+          <img
+            class="umwa-logo"
+            src="/assets/images/umwa-logo.png"
+            alt="United Mine Workers of America"
+            style="
+              width:130px !important;
+              height:45px !important;
+              max-width:130px !important;
+              max-height:45px !important;
+              object-fit:contain !important;
+            ">
+
+          <span class="local-number">
+            LOCAL 8982
+          </span>
+
+        </a>
+
+      </div>
+
+
+      <nav class="main-nav">
+
+        <a href="/">
+          Home
+        </a>
+
+        <a href="#next-meeting">
+          Next Meeting
+        </a>
+
+        <a href="#bring-it-up">
+          Bring It Up
+        </a>
+
+        <a href="#recaps">
+          Meeting Recaps
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- HERO -->
+
+    <section class="meeting-center-hero">
+
+      <p class="eyebrow">
+        UMWA LOCAL 8982
+      </p>
+
+      <h1>
+        MEETING
+        <span>CENTER</span>
+      </h1>
+
+      <p class="intro">
+        Find the next Local 8982 meeting, submit a topic
+        you would like leadership to know about before the
+        meeting, and read meeting recaps and announcements.
+      </p>
+
+    </section>
+
+
+    <!-- NEXT MEETING -->
+
+    <section
+      id="next-meeting"
+      class="meeting-center-section">
+
+      <div class="meeting-center-container">
+
+        <div class="meeting-center-card">
+
+          <div class="meeting-info-grid">
+
+
+            <div>
+
+              <p class="eyebrow">
+                NEXT UNION MEETING
+              </p>
+
+              <h2>
+                Local 8982 Union Meeting
+              </h2>
+
+              <p
+                id="nextMeetingDate"
+                class="meeting-center-date">
+                Third Sunday of the Month
+              </p>
+
+              <p class="meeting-center-time">
+                8:00 AM
+              </p>
+
+            </div>
+
+
+            <div class="meeting-center-location">
+
+              <strong>
+                Maytown Park Building
+              </strong>
+
+              <span>
+                Park Road • Maytown, Alabama
+              </span>
+
+              <a
+                class="button button-gold"
+                href="https://www.google.com/maps/dir/?api=1&destination=33.530920,-87.004240"
+                target="_blank"
+                rel="noopener noreferrer">
+                Get Directions
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <p class="regular-meeting-note">
+            Regular Local 8982 union meetings are held on
+            the <strong>third Sunday of every month at
+            8:00 AM</strong>.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- BRING IT UP AT THE MEETING -->
+
+    <section
+      id="bring-it-up"
+      class="meeting-center-section"
+      style="background:#090909;">
+
+      <div class="meeting-center-container">
+
+        <div class="meeting-center-card">
+
+          <p class="eyebrow">
+            BEFORE THE MEETING
+          </p>
+
+          <h2>
+            Bring It Up at the Meeting
+          </h2>
+
+          <p style="
+            color:#bcbcbc;
+            line-height:1.65;
+            max-width:760px;
+          ">
+            Have a question, concern, suggestion or topic
+            you would like Local 8982 leadership to know
+            about before the next union meeting?
+          </p>
+
+          <p style="
+            color:#bcbcbc;
+            line-height:1.65;
+            max-width:760px;
+          ">
+            Use the meeting topic form to share it with
+            Local leadership. You may choose to identify
+            yourself or remain anonymous.
+          </p>
+
+
+          <div style="
+            margin:28px 0;
+            padding:24px;
+            background:#202020;
+            border-left:6px solid var(--gold);
+            border-radius:7px;
+          ">
+
+            <strong style="
+              display:block;
+              margin-bottom:7px;
+              color:#ffffff;
+              font-size:1.05rem;
+            ">
+              What can I submit?
+            </strong>
+
+            <span style="
+              color:#b5b5b5;
+              line-height:1.6;
+            ">
+              Workplace concerns, contract questions,
+              union business, suggestions, benefits questions,
+              safety or health topics, and other matters you
+              would like leadership to be aware of before
+              the meeting.
+            </span>
+
+          </div>
+
+
+          <a
+            class="button button-gold"
+            href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAAEIUoetUNk44RlRWUjNCSE85NlpHS0NDQUxINVNEUS4u"
+            target="_blank"
+            rel="noopener noreferrer">
+            Submit a Meeting Topic
+          </a>
+
+
+          <div style="
+            margin-top:30px;
+            padding:22px;
+            background:#f2f2ef;
+            color:#171717;
+            border-radius:7px;
+          ">
+
+            <strong style="
+              display:block;
+              margin-bottom:8px;
+            ">
+              Important
+            </strong>
+
+            <p style="
+              margin:0;
+              color:#444444;
+              line-height:1.55;
+            ">
+              Do not rely on this form for urgent grievances,
+              discipline, discharge, imminent safety hazards,
+              or matters involving an approaching deadline.
+              Contact a Local 8982 representative directly
+              for time-sensitive matters.
+            </p>
+
+          </div>
+
+
+          <p style="
+            margin:24px 0 0;
+            color:#888888;
+            font-size:0.86rem;
+            line-height:1.5;
+          ">
+            Submitting a topic does not guarantee that it
+            will become an official agenda item or be
+            discussed publicly during the meeting.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- MEETING RECAPS -->
+
+    <section
+      id="recaps"
+      class="meeting-center-section">
+
+      <div class="meeting-center-container">
+
+        <div class="meeting-center-card">
+
+          <p class="eyebrow">
+            AFTER THE MEETING
+          </p>
+
+          <h2>
+            Meeting Recaps
+          </h2>
+
+          <p style="
+            color:#bcbcbc;
+            line-height:1.65;
+            max-width:760px;
+          ">
+            Important announcements, upcoming dates,
+            general Local business and information members
+            should know from Local 8982 meetings will be
+            posted here.
+          </p>
+
+
+          <!-- EMPTY STATE -->
+
+          <div
+            id="noRecaps"
+            style="
+              margin-top:28px;
+              padding:28px;
+              background:#202020;
+              border:1px dashed #444444;
+              border-radius:8px;
+              text-align:center;
+            ">
+
+            <div style="
+              font-size:2rem;
+              margin-bottom:10px;
+            ">
+              📋
+            </div>
+
+            <strong style="
+              display:block;
+              margin-bottom:7px;
+              color:#ffffff;
+            ">
+              No Meeting Recap Posted Yet
+            </strong>
+
+            <p style="
+              margin:0;
+              color:#999999;
+              line-height:1.55;
+            ">
+              When a Local 8982 meeting recap is published,
+              it will appear here.
+            </p>
+
+          </div>
+
+
+          <!--
+            FUTURE RECAP CARDS GO HERE.
+
+            Example:
+
+            <article class="meeting-recap-card">
+
+              <p class="eyebrow">
+                NOVEMBER 2026
+              </p>
+
+              <h3>
+                November 2026 Meeting Recap
+              </h3>
+
+              <p>
+                Safety updates, Local business, upcoming
+                dates and important member reminders.
+              </p>
+
+              <a
+                class="button button-gold"
+                href="/recaps/2026-11.html">
+                Read Meeting Recap
+              </a>
+
+            </article>
+          -->
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+        <!-- QUICK ACTIONS -->
+
+    <section
+      class="meeting-center-section"
+      style="background:#090909;">
+
+      <div class="meeting-center-container">
+
+        <div class="meeting-center-card">
+
+          <p class="eyebrow">
+            LOCAL 8982
+          </p>
+
+          <h2>
+            Quick Actions
+          </h2>
+
+          <p style="
+            color:#bcbcbc;
+            line-height:1.65;
+            max-width:760px;
+          ">
+            Use these links to return to the Local 8982
+            website, access secure member resources, or
+            review workplace and mine-safety rights.
+          </p>
+
+
+          <div style="
+            margin-top:25px;
+            display:flex;
+            gap:14px;
+            flex-wrap:wrap;
+          ">
+
+            <a
+              class="button button-gold"
+              href="/">
+              Local 8982 Home
+            </a>
+
+            <a
+              class="button button-outline"
+              href="https://members.umwa8982.org">
+              Member Resources
+            </a>
+
+            <a
+              class="button button-outline"
+              href="/rights.html">
+              Know Your Rights
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <strong>
+      UMWA LOCAL 8982
+    </strong>
+
+    <p>
+      United Mine Workers of America
+    </p>
+
+    <p>
+      Meeting Center
+    </p>
+
+  </footer>
+
+
+  <!-- EXISTING LOCAL 8982 JAVASCRIPT -->
+
+  <script src="/assets/js/local8982.js"></script>
+
+
+</body>
+</html>
+
