@@ -181,7 +181,11 @@ button.disabled = true;
   document.getElementById("notificationCard");
 
 if (notificationCard) {
-  notificationCard.style.display = "none";
+  notificationCard.style.setProperty(
+    "display",
+    "none",
+    "important"
+  );
 }
     
   } catch (error) {
@@ -236,8 +240,12 @@ async function hideNotificationCardIfEnabled() {
       await registration.pushManager.getSubscription();
 
     if (subscription) {
-      card.style.display = "none";
-    }
+  card.style.setProperty(
+    "display",
+    "none",
+    "important"
+  );
+}
 
   } catch (error) {
 
