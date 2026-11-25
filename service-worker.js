@@ -1,4 +1,4 @@
-const CACHE_NAME = "umwa8982-v3";
+const CACHE_NAME = "umwa8982-v4";
 
 const APP_ASSETS = [
   "/",
