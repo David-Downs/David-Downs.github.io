@@ -782,3 +782,88 @@ a {
     display: none !important;
   }
 }
+
+/* =========================================================
+   BRING IT UP AT THE MEETING
+   ========================================================= */
+
+.meeting-topic-banner {
+  padding: 30px 24px;
+
+  background: #101010;
+
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
+}
+
+.meeting-topic-inner {
+  max-width: 1180px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    auto 1fr auto;
+
+  align-items: center;
+
+  gap: 26px;
+}
+
+.meeting-topic-icon {
+  font-size: 3rem;
+}
+
+.meeting-topic-content h2 {
+  margin: 0 0 6px;
+
+  color: #ffffff;
+
+  font-size: 1.55rem;
+}
+
+.meeting-topic-content .eyebrow {
+  margin-bottom: 5px;
+}
+
+.meeting-topic-content > p:not(.eyebrow) {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #bdbdbd;
+
+  line-height: 1.5;
+}
+
+
+/* PHONE */
+
+@media (max-width: 700px) {
+
+  .meeting-topic-banner {
+    padding: 35px 20px;
+  }
+
+  .meeting-topic-inner {
+    grid-template-columns: 1fr;
+
+    gap: 17px;
+
+    text-align: center;
+  }
+
+  .meeting-topic-icon {
+    font-size: 3.3rem;
+  }
+
+  .meeting-topic-content > p:not(.eyebrow) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .meeting-topic-inner .button {
+    width: 100%;
+  }
+}
